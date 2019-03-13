@@ -6,6 +6,12 @@ using UnityEngine;
 
 public class CharacterData : ScriptableObject
 {
+    public enum Races
+    {
+        Human,
+        Mech,
+    }
+
     public enum Factions
     {
         Civilian,
@@ -17,9 +23,12 @@ public class CharacterData : ScriptableObject
     [Header("Character Info")]
     public string FirstName;
     public string LastName;
+    public Races Race;
     public Factions Faction;
     public int ModelID;
 
     [Header("Character Assets")]
-    public List<GameObject> Models;
+    public List<GameObject> HumanModels;
+    public List<GameObject> MechModels;
+
 }
