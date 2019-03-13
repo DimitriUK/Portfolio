@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8eecc697fda8154abbd447006388ade, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  FirstName: Marcus
+  LastName: Elliot
+  Faction: 2
+  ModelID: 0
+  Models:
+  - {fileID: 1720713490575138, guid: d75d2f81c2ec2664f8be836c359b15a2, type: 3}
+  - {fileID: 1472097213436868, guid: b4243624fc7192e4997e36f6ffcab7bd, type: 3}
+  - {fileID: 1892337984732832, guid: 486922dee958205458428ac865ed5aa4, type: 3}
+  - {fileID: 1583428906599088, guid: 36e9f67e8892e12418c345baea86dc8f, type: 3}
+  - {fileID: 1227513149954110, guid: b8ead4a4004f7f54b8146c29dd43c92d, type: 3}
+  - {fileID: 1094714989487216, guid: 7d3ad73e549d9fc438a2db249bef8a40, type: 3}
+  - {fileID: 1704412919699308, guid: 4ad7ca59d549a4a42b0323fe07c408d4, type: 3}
+  - {fileID: 1879842399508180, guid: 4914fae13b25ccf4d8fc725439a3160e, type: 3}
