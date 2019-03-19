@@ -5,30 +5,50 @@ using UnityEngine.UI;
 
 public class CreateCharacter : MonoBehaviour
 {
+    [Header("Assign Character")]
     public CharacterData Character;
 
+    [Header("Name Components")]
     public InputField FirstName;
     public InputField LastName;
 
-    public Dropdown Faction;
-
+    [Header("Race Components")]
     public Text RaceIDText;
     public int RaceID;
 
+    [Header("Character Components")]
     public Text CharacterIDText;
     public int CharacterID;
 
+    [Header("Spawn List Object")]
     public List<GameObject> CharactersSpawnList;
 
+    [Header("Spawn Position")]
     public Vector3 SpawnLocation = new Vector3(396.7f, 138.5f, 572.4f);
-    public GameObject RotFixer;
+
+    public GameObject RotFixer; // To be changed to Quaternion eventually.
 
     private GameObject CurrentModel;
+
+    public static CreateCharacter instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
         RaceIDCounter(this.gameObject);
         CharacterIDCounter(this.gameObject);
+    }
+
+    public void CharacterSave()
+    {
+        string firstName = FirstName.text;
+        string lastName = LastName.text;
+
+        SaveCharacter.instance.SerializeData(firstName, lastName, RaceID, CharacterID);
     }
 
     public void RaceIDCounter(GameObject obj)
