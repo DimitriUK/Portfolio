@@ -1,9 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.IO;
 using UnityEngine;
-using Newtonsoft.Json;
 using UnityEngine.UI;
 
 public class GameLoader : MonoBehaviour
@@ -30,8 +26,6 @@ public class GameLoader : MonoBehaviour
         DeserializePlayerData(playerData);
     }
 
-
-
     public void DeserializePlayerData(SoldierData data)
     {
         SoldierName.text = data.FirstName + " " + data.LastName;
@@ -44,10 +38,6 @@ public class GameLoader : MonoBehaviour
             playerSpawned.transform.position = new Vector3(0, 0.5f, 0); 
 
         else playerSpawned.transform.position = new Vector3(0, 0, 0); // Change to Last Saved Coordinates in new system to be created.
-
-
-
-
 
         if (RaceID == 1)
             Instantiate(characterData.HumanModels[ModelID - 1], playerSpawned.transform);

@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     private Camera mainCam;
     private Rigidbody rb;
-    private const int moveSpeed = 50;
+    private int moveSpeed = 50;
+    private int fastSpeed = 130;
+    private int maxSpeed = 50;
 
     private void Start()
     {
@@ -16,8 +16,18 @@ public class CameraController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized;
+        }
+
         if (Input.anyKey)
             UpdateCameraController();
+
+
+        if (Input.GetKey(KeyCode.LeftShift))
+            moveSpeed = fastSpeed;
+        else moveSpeed = 50;
     }
 
     public void UpdateCameraController()

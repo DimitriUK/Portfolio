@@ -6,9 +6,6 @@ using Newtonsoft.Json;
 
 public class SaveCharacter : MonoBehaviour
 {
-    public string FileName;
-    private string filePath;
-
     public static SaveCharacter instance;
 
     private void Awake()
